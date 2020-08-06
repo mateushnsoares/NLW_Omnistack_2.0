@@ -4,36 +4,42 @@ import whatsappIcon from '../../assets/images/icons/whatsapp.svg'
 
 import './styles.css'
 
-const TeacherItem: React.FC = () => {
+interface Props {
+  name: string
+  avatar: string
+  subject: string
+  bio: string
+  cost: string
+  whatsapp: string
+}
+
+const TeacherItem: React.FC<Props> = ({
+  name,
+  avatar,
+  subject,
+  bio,
+  cost,
+  whatsapp,
+}) => {
   return (
     <article className='teacher-item'>
       <header>
-        <img
-          src='https://avatars2.githubusercontent.com/u/66792792?s=200&v=4'
-          alt='Mateus Henrique'
-        />
+        <img src={avatar} alt={name} />
         <div>
-          <strong>Mateus Henrique</strong>
-          <span>Química</span>
+          <strong>{name}</strong>
+          <span>{subject}</span>
         </div>
       </header>
-      <p>
-        Entusiasta das melhores tecnologias de química avançada.
-        <br />
-        <br />
-        Apaixonado por explodir coisas em laboratório e por mudar a vida das
-        pessoas através de experiências. Mais de 200.000 pessoas já passaram por
-        uma das minhas explosões.
-      </p>
+      <p>{bio}</p>
       <footer>
         <p>
           Preço/hora
-          <strong>R$ 120,00</strong>
+          <strong>R$ {cost}</strong>
         </p>
-        <button type='button'>
+        <a href={`https://wa.me/${whatsapp}`}>
           <img src={whatsappIcon} alt='Whatsapp' />
           Entrar em contato
-        </button>
+        </a>
       </footer>
     </article>
   )
