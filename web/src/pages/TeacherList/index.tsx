@@ -85,12 +85,15 @@ const TeacherList: React.FC = () => {
         {teachers.map((teacher) => (
           <TeacherItem
             key={teacher.id}
-            name={teacher.name}
-            avatar={teacher.avatar}
-            subject={teacher.subject}
-            bio={teacher.bio}
-            cost={teacher.cost}
-            whatsapp={teacher.whatsapp}
+            teacher={{
+              id: teacher.id,
+              name: teacher.name,
+              avatar: teacher.avatar,
+              subject: teacher.subject,
+              bio: teacher.bio,
+              cost: teacher.cost,
+              whatsapp: teacher.whatsapp,
+            }}
           />
         ))}
       </main>
