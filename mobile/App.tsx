@@ -1,5 +1,4 @@
 import React from 'react'
-import { StyleSheet } from 'react-native'
 import { StatusBar } from 'expo-status-bar'
 
 import { AppLoading } from 'expo'

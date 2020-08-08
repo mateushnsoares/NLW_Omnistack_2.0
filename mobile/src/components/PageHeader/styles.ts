@@ -12,6 +12,12 @@ export default StyleSheet.create({
     justifyContent: 'space-between',
   },
 
+  headerContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+
   title: {
     fontFamily: 'Archivo_700Bold',
     fontSize: 24,
