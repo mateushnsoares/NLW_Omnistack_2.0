@@ -1,0 +1,13 @@
+{
+  "name": "nlw_omnistack_2.0",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "repository": "git@github.com:mateushnsoares/NLW_Omnistack_2.0.git",
+  "author": "MateusSoares895 <mateushenreiquensoares@gmail.com>",
+  "license": "MIT"
+}

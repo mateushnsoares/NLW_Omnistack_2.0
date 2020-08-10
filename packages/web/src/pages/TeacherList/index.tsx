@@ -8,22 +8,13 @@ import Select from '../../components/Select'
 
 import api from '../../services/api'
 
+import ITeacher from '../../interfaces/ITeacher'
+
 import './styles.css'
 interface IFormData {
   subject: string
   week_day: string
   time: string
-}
-
-interface ITeacher {
-  id: number
-  subject: string
-  cost: string
-  user_id: number
-  name: string
-  avatar: string
-  whatsapp: string
-  bio: string
 }
 
 const TeacherList: React.FC = () => {
@@ -36,8 +27,8 @@ const TeacherList: React.FC = () => {
       })
 
       setTeachers(response)
-    } catch (err) {
-      alert('Error on seach')
+    } catch {
+      alert('Erro na pesquisa')
     }
   }
 
@@ -83,18 +74,7 @@ const TeacherList: React.FC = () => {
 
       <main>
         {teachers.map((teacher) => (
-          <TeacherItem
-            key={teacher.id}
-            teacher={{
-              id: teacher.id,
-              name: teacher.name,
-              avatar: teacher.avatar,
-              subject: teacher.subject,
-              bio: teacher.bio,
-              cost: teacher.cost,
-              whatsapp: teacher.whatsapp,
-            }}
-          />
+          <TeacherItem key={teacher.id} teacher={teacher} />
         ))}
       </main>
     </div>

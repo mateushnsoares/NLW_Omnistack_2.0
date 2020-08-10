@@ -4,17 +4,9 @@ import whatsappIcon from '../../assets/images/icons/whatsapp.svg'
 
 import api from '../../services/api'
 
-import './styles.css'
+import ITeacher from '../../interfaces/ITeacher'
 
-interface ITeacher {
-  id: number
-  name: string
-  avatar: string
-  subject: string
-  bio: string
-  cost: string
-  whatsapp: string
-}
+import './styles.css'
 
 interface Props {
   teacher: ITeacher
